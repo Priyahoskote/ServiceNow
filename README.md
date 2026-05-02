@@ -1,4 +1,3 @@
-<img width="1819" height="803" alt="Screenshot 2026-05-02 152931" src="https://github.com/user-attachments/assets/1c144123-d70a-4bf0-9b55-e2f27686762f" />
 # 🚀 Automated Employee Onboarding & Offboarding System (ServiceNow)
 
 ## 📌 Project Overview
@@ -21,6 +20,58 @@ The Automated Employee Onboarding & Offboarding System is a ServiceNow-based sol
 - Approval workflows
 - Task assignment
 - Offboarding automation
+
+##🧩 System Architecture
+The system consists of the following components:
+  Service Catalog Item
+
+      “Employee Request”
+
+Collects employee details such as:
+
+Employee ID
+Manager
+Department
+Joining Date / Exit Date
+Assets Required / Assets to Collect
+Request Type (Onboarding / Offboarding)
+Catalog UI Policies
+
+Dynamically show/hide fields based on request type
+Enforce mandatory fields
+Flow Designer
+
+Automates the entire workflow:
+
+Trigger → Approval → Task Creation → Completion → Notification
+Custom Table
+
+Stores lifecycle data (Employee Lifecycle)
+⚙️ Workflow Explanation
+🔹 Step 1: Trigger
+Flow starts when a user submits a catalog request
+🔹 Step 2: Get Catalog Variables
+Fetch user input values from the form
+🔹 Step 3: Create Lifecycle Record
+Insert record into Employee Lifecycle table
+🔹 Step 4: Approval Process
+Approval sent to Manager (dynamic reference)
+✅ If Approved:
+🔸 Task Creation
+IT Task → Account setup & hardware
+Facilities Task → Workspace preparation
+Security Task → ID & access provisioning
+🔸 Wait Condition
+Flow waits until all tasks are marked Closed Complete
+🔸 Completion
+Update Lifecycle Status → Completed
+Update RITM → Closed Complete
+Send completion email
+❌ If Rejected:
+Update status → Rejected
+Send rejection email to requester
+🔄 End-to-End Flow
+User submits request → Manager approval → Tasks assigned to departments → Tasks completed → System updates status → Notification sent
 
 ## 📷 Screenshots
 <img width="1907" height="865" alt="Screenshot 2026-05-02 154725" src="https://github.com/user-attachments/assets/d12e886b-0d10-4df9-9794-617eb6635f49" />
