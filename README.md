@@ -22,7 +22,7 @@ The Automated Employee Onboarding & Offboarding System is a ServiceNow-based sol
 - Offboarding automation
 
 ## 📷 Screenshots
-(Add your screenshots here)
+![Screenshot](docs/screenshots/image1.png)
 
 ## 👤 Author
 Your Name
