@@ -118,16 +118,6 @@ User submits request
 
 ---
 
-## 📸 Screenshots
-
-
-Example:
-
-![Catalog Form](docs/screenshots/img4.png)
-![Flow Designer](docs/screenshots/img1.png)
-![Approval Process](docs/screenshots/img7.png)
-
----
 
 ## 💡 Key Features
 
